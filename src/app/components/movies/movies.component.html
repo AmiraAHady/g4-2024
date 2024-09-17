@@ -1,39 +1,24 @@
+
+<div class="row">
+ <input type="text" class="form-control m-3"  [(ngModel)]="searchVal">
+ <p>{{searchVal}}</p> 
+</div>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card h-100">
-        <img src="https://media.themoviedb.org/t/p/w600_and_h900_bestv2/wWba3TaojhK7NdycRhoQpsG0FaH.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Despicable Me 4 (2024)</h5>
-          <p class="card-text">Gru and Lucy and their girls—Margo, Edith and Agnes—welcome a new member to the Gru family, Gru Jr.</p>
-        </div>
+  <div class="col">
+    <div class="card h-100">
+      <img
+        [src]="movieData.poster_path"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{movieData.title}}</h5>
+        <p class="card-text">{{movieData.overview}}
+        </p>
+        <!-- <button class="btn btn-primary" disabled="{{!movieData.video}}">Watch</button> -->
+        <button class="btn btn-primary" [disabled]="!movieData.video" (click)="watchMovie()">Watch</button>
       </div>
+      
     </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="https://media.themoviedb.org/t/p/w600_and_h900_bestv2/wWba3TaojhK7NdycRhoQpsG0FaH.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Despicable Me 4 (2024)</h5>
-          <p class="card-text">Gru and Lucy and their girls—Margo, Edith and Agnes—welcome a new member to the Gru family, Gru Jr.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="https://media.themoviedb.org/t/p/w600_and_h900_bestv2/wWba3TaojhK7NdycRhoQpsG0FaH.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Despicable Me 4 (2024)</h5>
-          <p class="card-text">Gru and Lucy and their girls—Margo, Edith and Agnes—welcome a new member to the Gru family, Gru Jr.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="https://media.themoviedb.org/t/p/w600_and_h900_bestv2/wWba3TaojhK7NdycRhoQpsG0FaH.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Despicable Me 4 (2024)</h5>
-          <p class="card-text">Gru and Lucy and their girls—Margo, Edith and Agnes—welcome a new member to the Gru family, Gru Jr.</p>
-        </div>
-      </div>
-    </div>
-    
   </div>
+</div>

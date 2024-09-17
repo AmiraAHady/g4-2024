@@ -1,1 +1,32 @@
-<p>tv-list works!</p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  @for (tv of tvShowList; track $index) {
+  <div class="col">
+    <div class="card h-100">
+      <img
+        [src]="
+          'https://media.themoviedb.org/t/p/w600_and_h900_bestv2' +
+          tv.poster_path
+        "
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5
+          class="card-title"
+          [ngClass]="tv.vote_average >= 8.7 ? 'title-text' : 'text-success'"
+        >
+          {{ tv.name }}
+        </h5>
+        <p class="card-text">{{ tv.overview }}</p>
+        @if (tv.vote_average >= 8.7) {
+        <span class="badge text-bg-dark">Top Rated</span>
+        }@else {
+        <span class="badge text-bg-warning">{{ tv.vote_average }}</span>
+        }
+      </div>
+    </div>
+  </div>
+  }@empty {
+  <h1>No Data Founded!</h1>
+  }
+</div>
