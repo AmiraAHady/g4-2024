@@ -1,3 +1,4 @@
+import { DatePipe, UpperCasePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -5,18 +6,15 @@ import { FormsModule } from '@angular/forms';
   // component directive
   selector: 'app-movies',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,DatePipe,UpperCasePipe],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css',
 })
 export class MoviesComponent implements OnInit {
   searchVal: string = 'ramy';
-  constructor() {
-    console.log('inside movie constructor');
-  }
+  constructor() {}
+   
   ngOnInit() {
-    // call api
-    console.log('inside ngoninit');
   }
 
   movieData = {

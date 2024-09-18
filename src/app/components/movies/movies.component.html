@@ -1,24 +1,24 @@
-
 <div class="row">
- <input type="text" class="form-control m-3"  [(ngModel)]="searchVal">
- <p>{{searchVal}}</p> 
+  <input type="text" class="form-control m-3" [(ngModel)]="searchVal" />
+  <p>{{ searchVal }}</p>
 </div>
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
-      <img
-        [src]="movieData.poster_path"
-        class="card-img-top"
-        alt="..."
-      />
+      <img [src]="movieData.poster_path" class="card-img-top" alt="..." />
       <div class="card-body">
-        <h5 class="card-title">{{movieData.title}}</h5>
-        <p class="card-text">{{movieData.overview}}
-        </p>
+        <h5 class="card-title">{{ movieData.title | uppercase}}</h5>
+        <p class="card-text">{{ movieData.overview }}</p>
+        <h5>{{ movieData.release_date | date }}</h5>
         <!-- <button class="btn btn-primary" disabled="{{!movieData.video}}">Watch</button> -->
-        <button class="btn btn-primary" [disabled]="!movieData.video" (click)="watchMovie()">Watch</button>
+        <button
+          class="btn btn-primary"
+          [disabled]="!movieData.video"
+          (click)="watchMovie()"
+        >
+          Watch
+        </button>
       </div>
-      
     </div>
   </div>
 </div>
