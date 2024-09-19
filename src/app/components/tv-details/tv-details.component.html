@@ -22,14 +22,14 @@
       <h5>Overview</h5>
       <p class="movie-overview">{{ tv.overview }}</p>
 
-      <!-- <h5>Genres</h5>
+      <h5>Genres</h5>
       <ul class="list-inline">
-        @for (genre of movie.genres; track $index) {
+        @for (genre of tv.genres; track $index) {
         <li class="list-inline-item">
           <span class="badge" [ngClass]="genre.name">{{ genre.name }}</span>
         </li>
         }
-      </ul> -->
+      </ul> 
 
       <!-- <h5>Cast</h5>
         <div class="row">

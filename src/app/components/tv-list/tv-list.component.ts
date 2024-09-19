@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-tv-list',
   standalone: true,
-  imports: [NgClass, NgStyle, DecimalPipe,RouterLink],
+  imports: [NgClass, NgStyle, DecimalPipe, RouterLink],
   templateUrl: './tv-list.component.html',
   styleUrl: './tv-list.component.css',
 })
@@ -16,6 +16,8 @@ export class TvListComponent implements OnInit {
   constructor(private tvServiceObj: TvService) {}
 
   ngOnInit() {
-    this.tvShowList = this.tvServiceObj.getAllTvs();
+    this.tvServiceObj.getAllTvs().subscribe((data) => {
+      this.tvShowList=data.results
+    });
   }
 }

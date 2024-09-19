@@ -1,0 +1,79 @@
+.ActionAdventure {
+    background-color: #FF5733; /* Fiery orange-red */
+    color: #FFFFFF; /* White text for high contrast */
+}
+
+.Animation {
+    background-color: #FFD700; /* Bright yellow */
+    color: #000000; /* Black text for clear contrast */
+}
+
+.Comedy {
+    background-color: #FFC300; /* Fun yellow-orange */
+    color: #000000; /* Black text for easy readability */
+}
+
+.Crime {
+    background-color: #2F4F4F; /* Dark slate grey */
+    color: #FFFFFF; /* White text to contrast with the dark background */
+}
+
+.Documentary {
+    background-color: #8FBC8F; /* Soft green */
+    color: #FFFFFF; /* White text for a balanced look */
+}
+
+.Drama {
+    background-color: #800000; /* Deep maroon */
+    color: #FFFFFF; /* White text to pop against the dark background */
+}
+
+.Family {
+    background-color: #FFB6C1; /* Light pink */
+    color: #000000; /* Black text for good readability */
+}
+
+.Kids {
+    background-color: #FF69B4; /* Bright pink */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+.Mystery {
+    background-color: #4B0082; /* Dark indigo */
+    color: #FFFFFF; /* White text to contrast with the dark tone */
+}
+
+.News {
+    background-color: #4682B4; /* Steel blue */
+    color: #FFFFFF; /* White text for clarity */
+}
+
+.Reality {
+    background-color: #FF4500; /* Bright red-orange */
+    color: #FFFFFF; /* White text for a vibrant contrast */
+}
+
+.SciFiFantasy {
+    background-color: #6A5ACD; /* Slate blue */
+    color: #FFFFFF; /* White text for a futuristic vibe */
+}
+
+.Soap {
+    background-color: #DA70D6; /* Orchid purple */
+    color: #FFFFFF; /* White text to balance the vibrant background */
+}
+
+.Talk {
+    background-color: #20B2AA; /* Light sea green */
+    color: #FFFFFF; /* White text for a clean contrast */
+}
+
+.WarPolitics {
+    background-color: #708090; /* Slate grey */
+    color: #FFFFFF; /* White text for a serious tone */
+}
+
+.Western {
+    background-color: #D2691E; /* Chocolate brown */
+    color: #FFFFFF; /* White text for a classic western feel */
+}
